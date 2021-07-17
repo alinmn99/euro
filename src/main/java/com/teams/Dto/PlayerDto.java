@@ -1,4 +1,4 @@
-package com.teams.repositories;
+package com.teams.Dto;
 
 import lombok.Data;
 

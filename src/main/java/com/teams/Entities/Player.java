@@ -1,4 +1,4 @@
-package com.teams.repositories;
+package com.teams.Entities;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -14,6 +14,15 @@ public class Player {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name ="price")
+    private int price;
+
+    @Column(name = "domestic_team")
+    private String domestic_team;
+
+    @Column(name = "age")
+    private int  age;
 
     @OneToMany(mappedBy = "player")
     private Set<TeamBasement> teamBasements ;
@@ -52,11 +61,39 @@ public class Player {
         this.name = name;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getDomestic_team() {
+        return domestic_team;
+    }
+
+    public void setDomestic_team(String domestic_team) {
+        this.domestic_team = domestic_team;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", price=" + price +
+                ", domestic_team='" + domestic_team + '\'' +
+                ", age=" + age +
+                ", teamBasements=" + teamBasements +
                 '}';
     }
 }

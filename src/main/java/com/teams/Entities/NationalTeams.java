@@ -1,4 +1,4 @@
-package com.teams.repositories;
+package com.teams.Entities;
 
 import javax.persistence.*;
 import java.util.Set;

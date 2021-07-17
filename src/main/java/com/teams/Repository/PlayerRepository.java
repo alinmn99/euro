@@ -1,5 +1,6 @@
-package com.teams.repositories;
+package com.teams.Repository;
 
+import com.teams.Entities.Player;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

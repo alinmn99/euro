@@ -1,5 +1,7 @@
-package com.teams.repositories;
+package com.teams.Controller;
 
+import com.teams.Repository.TeamBasementRepository;
+import com.teams.Entities.TeamBasement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +13,7 @@ import java.util.List;
 public class TeamBasementController {
 
     @Autowired
-   TeamBasementRepository teamBasementRepository;
+    TeamBasementRepository teamBasementRepository;
 
     @GetMapping("/teambasement")
     public long shotTeamBasement (Model model) {

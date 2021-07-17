@@ -1,5 +1,7 @@
-package com.teams.repositories;
+package com.teams.Controller;
 
+import com.teams.Entities.Player;
+import com.teams.Repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +13,7 @@ import java.util.List;
 public class PlayerController {
 
     @Autowired
-   PlayerRepository playerRepository;
+    PlayerRepository playerRepository;
 
     @GetMapping("/player")
     public String getPlayers (Model model) {

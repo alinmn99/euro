@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
-import com.teams.repositories.NationalTeams;
-import com.teams.repositories.Player;
-import com.teams.repositories.TeamBasement;
-import com.teams.repositories.NationalTeamsRepository;
-import com.teams.repositories.PlayerRepository;
-import com.teams.repositories.TeamBasementRepository;
+import com.teams.Entities.NationalTeams;
+import com.teams.Entities.Player;
+import com.teams.Entities.TeamBasement;
+import com.teams.Repository.NationalTeamsRepository;
+import com.teams.Repository.PlayerRepository;
+import com.teams.Repository.TeamBasementRepository;
 
 import javax.transaction.Transactional;
 

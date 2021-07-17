@@ -1,7 +1,8 @@
-package com.teams.repositories;
+package com.teams;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class EuroApplication {

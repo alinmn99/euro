@@ -1,5 +1,6 @@
-package com.teams.repositories;
+package com.teams.Repository;
 
+import com.teams.Entities.NationalTeams;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
