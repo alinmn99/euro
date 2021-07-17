@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -27,27 +28,26 @@ public class NationalTeamsController {
         return "nationalTeams";
     }
 
+//    @GetMapping("/nationalTeams/add")
+//    @Secured("ROLE_USER")
+//    public String showNationalTeams(NationalTeamsDto nationalTeamsDto) {
+//        nationalTeamsDto.setName((List<NationalTeams>) nationalTeamsRepository.findAll());
+//        return "nationalTeam-add";
+//    }
+
     @GetMapping("/nationalTeams/add")
-    @Secured("ROLE_ADMIN")
-    public String showNationalTeams(NationalTeamsDto nationalTeamsDto){
-        nationalTeamsDto.setName((List<NationalTeams>)nationalTeamsRepository.findAll());
-        return "nationalTeam-add";
+    public String addNationalTeam(Model model) {
+        NationalTeams nationalTeams = new NationalTeams();
+        model.addAttribute("nationalTeams", nationalTeams);
+        return "nationalTeams-add";
+
     }
 
-    @PostMapping("nationalTeams/add")
-    @Secured("ROLE_ADMIN")
-    public String addNationalTeam(@Validated NationalTeamsDto nationalTeamsDto, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "nationalTeam-add";}
-        return null;
+    @PostMapping("/nationalTeams/addTeam")
+    public String addTeam(@ModelAttribute ("nationalTeams") NationalTeams nationalTeams){
+        nationalTeamsRepository.save(nationalTeams);
+        return "nationalTeams";
     }
-
-//   NationalTeamsRepository.save(
-//
-//    void convertDtoToEntity(NationalTeams);
-//    model.addAttribute("nationalTeams", NationalTeamsRepository.findAll());
-//    return "nationalTeams";
-
 }
 
 

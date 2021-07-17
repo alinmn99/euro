@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "NationalTeams")
+@Table(name = "national_teams")
 public class NationalTeams {
 
     @Id
@@ -59,4 +59,6 @@ public class NationalTeams {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+
 }

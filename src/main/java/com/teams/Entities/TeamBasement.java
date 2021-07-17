@@ -1,8 +1,9 @@
 package com.teams.Entities;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TeamBasement")
+@Table(name = "team_basement")
 public class TeamBasement {
 
     @Id
@@ -11,11 +12,11 @@ public class TeamBasement {
     private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn (name = "team_id")
+    @JoinColumn(name = "team_id")
     private NationalTeams nationalTeam;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn (name = "player_id")
+    @JoinColumn(name = "player_id")
     private Player player;
 
 
