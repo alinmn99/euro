@@ -9,21 +9,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
+@RequestMapping("/nationalTeams")
 public class NationalTeamsController {
 
     @Autowired
     NationalTeamsRepository nationalTeamsRepository;
 
-    @GetMapping("/nationalTeams")
+    @GetMapping("/list")
     public String getNationalTeams(Model model) {
-        List<NationalTeams> nationalTeams = (List<NationalTeams>) nationalTeamsRepository.findAll();
+        List<NationalTeams> nationalTeams = nationalTeamsRepository.findAll();
         model.addAttribute("nationalTeams", nationalTeams);
         return "nationalTeams";
     }
@@ -35,20 +35,41 @@ public class NationalTeamsController {
 //        return "nationalTeam-add";
 //    }
 
-    @GetMapping("/nationalTeams/add")
+    @GetMapping("/add")
     public String addNationalTeam(Model model) {
         NationalTeams nationalTeams = new NationalTeams();
         model.addAttribute("nationalTeams", nationalTeams);
         return "nationalTeams-add";
-
     }
 
-    @PostMapping("/nationalTeams/addTeam")
-    public String addTeam(@ModelAttribute ("nationalTeams") NationalTeams nationalTeams){
+
+    @GetMapping("/update")
+    public String updateNationalTeam(@RequestParam("nationalTeamId") Long id, Model model) {
+        Optional<NationalTeams> nationalTeams = nationalTeamsRepository.findById(id);
+        model.addAttribute("nationalTeams", nationalTeams);
+        return "nationalTeams-add";
+    }
+
+    @PostMapping("/save")
+    public String addTeam(@ModelAttribute("nationalTeams") NationalTeams nationalTeams) {
         nationalTeamsRepository.save(nationalTeams);
         return "nationalTeams";
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteTeam(@PathVariable("id") Long id) {
+        nationalTeamsRepository.deleteById(id);
+        return "nationalTeams";
+    }
 }
+//    @PostMapping("/delete")
+//    public String deleteTeam(@PathVariable("nationalTeams") long id, Model model) {
+//        NationalTeams nationalTeams = nationalTeamsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+//        nationalTeamsRepository.delete(nationalTeams);
+//        model.addAttribute("nationalTeams", nationalTeamsRepository.findAll());
+//        return "nationalTeams";
+//    }
+//}
 
 
 
