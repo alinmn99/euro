@@ -16,19 +16,22 @@
 
 
 <div>
-    <td>
-        <img th:src="@{/images/euro2020.jpg}"  class="img-responsive center-block"
-             id="icon" alt="User Icon"/>
-    </td>
+    <!--    <td>-->
+    <!--        <img th:src="@{/images/euro2020.jpg}"  class="img-responsive center-block"-->
+    <!--             id="icon" alt="User Icon"/>-->
+    <!--    </td>-->
     <table class="table table-striped table-responsive-md">
         <thead>
         <tr>
             <th>id</th>
-            <th>image</th>
+            <th>flag</th>
             <th>name</th>
+
+
             <th>
                 <div>
-                    <a th:href="@{/nationalTeams/add}" class="btn btn-danger btn-sm mb-3">Add team</a>
+                    <a th:href="@{/nationalTeams/add}" style="alignment: center" class="btn btn-danger btn-sm mb-3">Add
+                        team</a>
                 </div>
             </th>
 
@@ -41,19 +44,21 @@
         <tbody>
         <tr th:each="nationalTeam : ${nationalTeams}">
             <td th:text="${nationalTeam.id}"></td>
-            <td>
-                <img th:src="@{images/italy.png}" class="img-responsive center-block"/>
-            </td>
 
+            <td>
+                <img th:src="@{/images/{image}(image=${nationalTeam.flag})}" width="40" height="25"
+                     style="alignment: center" class="img-responsive center-block"/>
+            </td>
             <td
                     th:text="${nationalTeam.name}"></td>
             <td>
                 <a th:href="@{/nationalTeams/update(nationalTeamId=${nationalTeam.id})}"
-                   class="btn btn-warning btn-sm mb-3">Update</a>
+                   style="alignment: center" class="btn btn-warning btn-sm mb-3">Update</a>
             </td>
 
             <td>
-                <a th:href="@{/nationalTeams/delete/{id}(id=${nationalTeam.id})}" class="btn btn-warning btn-sm mb-3">Delete</a>
+                <a th:href="@{/nationalTeams/delete/{id}(id=${nationalTeam.id})}" style="alignment: center"
+                   class="btn btn-warning btn-sm mb-3">Delete</a>
             </td>
 
 

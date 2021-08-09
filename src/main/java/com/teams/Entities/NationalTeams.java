@@ -15,6 +15,9 @@ public class NationalTeams {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "flag")
+    private String flag;
+
     @OneToMany(mappedBy = "nationalTeam")
     private Set<TeamBasement> teamBasements;
 
@@ -52,11 +55,22 @@ public class NationalTeams {
         this.name = name;
     }
 
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
+
+
     @Override
     public String toString() {
         return "NationalTeams{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", flag='" + flag + '\'' +
+                ", teamBasements=" + teamBasements +
                 '}';
     }
 

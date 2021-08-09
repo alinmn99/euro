@@ -15,11 +15,20 @@
 <table class="table table-striped table-responsive-md">
   <thead>
   <tr>
+
     <th>id</th>
     <th>name</th>
+
+
     <th>price</th>
     <th>domestic_team</th>
     <th>age</th>
+    <th>
+      <div>
+        <a th:href="@{/player/add}" style="alignment: center" class="btn btn-danger btn-sm mb-3">Add
+          player</a>
+      </div>
+    </th>
 
     <!--        <th sec:authorize="hasRole('ROLE_ADMIN')">Edit</th>-->
     <!--        <th sec:authorize="hasRole('ROLE_ADMIN')">Delete</th>-->
@@ -32,6 +41,11 @@
     <td th:text="${players.price}"></td>
     <td th:text="${players.domestic_team}"></td>
     <td th:text="${players.age}"></td>
+
+    <td>
+      <a th:href="@{/player/update(playersId=${players.id})}"
+         style="alignment: center" class="btn btn-warning btn-sm mb-3">Update</a>
+    </td>
 
     <!--        <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/books/edit/{id}(id=${book.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>-->
     <!--        <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/books/delete/{id}(id=${book.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>-->
