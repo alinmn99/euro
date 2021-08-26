@@ -1,93 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Euro Simulation</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-    .w3-sidebar {
-        z-index: 3;
-        width: 250px;
-        top: 43px;
-        bottom: 0;
-        height: inherit;
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-futbol-o, .fa-gamepad {
+        font-size: 200px
     }
 </style>
-<body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-overlap u-overlap-transparent"><header class="u-clearfix u-header u-header" id="sec-0297"><div class="u-clearfix u-sheet u-sheet-1">
-    <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="2560" data-image-height="845">
-        <img src="images/UEFA_Euro_2020_logo.svg.png" class="u-logo-image u-logo-image-1">
-    </a>
-    <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-                </symbol>
-                </defs></svg>
-            </a>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Teams</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Players</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Teams</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Players</a>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-blue w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">Euro Simulation</h1>
+    <p class="w3-xlarge">Template by 4MooN Studio</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-twothird">
+            <h1>Euro Simulation</h1>
+            <h5 class="w3-padding-32">Euro Simulation is a simple aplication for Euro Fans who can make a quickly and
+                fun simulation in hope to pick their favorite team</h5>
+
+            <p class="w3-text-grey">Euro is knowed in entire world because every Euro Competion has a High Level of
+                performance and Tought teams and players too</p>
         </div>
-        <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Players.html" style="padding: 10px 20px;">Players</a>
-            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="NationalTeams.html" style="padding: 10px 20px;">NationalTeams</a>
-            </li></ul>
-        </div>
-        <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                <div class="u-sidenav-overflow">
-                    <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
-                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Players.html" style="padding: 10px 20px;">Players</a>
-                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="NationalTeams.html" style="padding: 10px 20px;">NationalTeams</a>
-                    </li></ul>
-                </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-        </div>
-    </nav>
-</div></header>
-<section class="u-align-left-sm u-align-left-xs u-clearfix u-section-1" id="carousel_9bed">
-    <div class="u-clearfix u-sheet u-valign-middle-sm u-sheet-1">
-        <img class="u-image u-image-default u-image-1" data-image-width="2560" data-image-height="845" src="images/UEFA_Euro_2020_logo.svg.png">
-        <div class="u-align-left u-border-4 u-border-palette-4-base u-container-style u-group u-shape-rectangle u-white u-group-1">
-            <div class="u-container-layout u-container-layout-1">
-                <h3 class="u-custom-font u-text u-text-palette-4-base u-text-1">American Athletic</h3>
-                <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                <p class="u-text u-text-3">Image from <a href="https://www.freepik.com/photos/people" class="u-active-none u-border-1 u-border-palette-4-base u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1" target="_blank">Freepik</a>
-                </p>
-            </div>
+
+        <div class="w3-third w3-center">
+            <i class="fa fa-futbol-o w3-padding-64 w3-text-blue"></i>
         </div>
     </div>
-</section>
-<section class="u-align-center u-clearfix u-section-2" id="sec-b880">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout" style="">
-                <div class="u-layout-row" style="">
-                    <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-40 u-size-xs-60 u-image-1" src="" data-image-width="1920" data-image-height="1080">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-                    </div>
-                    <div class="u-align-left u-container-style u-layout-cell u-palette-1-base u-right-cell u-size-20 u-size-xs-60 u-layout-cell-2">
-                        <div class="u-container-layout u-valign-middle u-container-layout-2">
-                            <h2 class="u-text u-text-default u-text-1">Italy win the EURO2020</h2>
-                            <p class="u-align-center u-text u-text-2">Italy win the tournament after 1-1 (4-2 after penalty session)</p>
-                            <a href="" class="u-align-center u-border-2 u-border-white u-btn u-btn-rectangle u-button-style u-none u-btn-1">learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-third w3-center">
+            <i class="fa fa-gamepad w3-padding-64 w3-text-blue w3-margin-right"></i>
+        </div>
+
+        <div class="w3-twothird">
+            <h1>Lorem Ipsum</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
-</section>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <div class="w3-xlarge w3-padding-32">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by 4MooNStudio</a></p>
+
+    <div id="London" class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div id="Paris" class="city" style="display:none">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="city" style="display:none">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+
+    </div>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+
+</footer>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
 
 
-<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-153f"><div class="u-clearfix u-sheet u-sheet-1">
-    <p class="u-small-text u-text u-text-variant u-text-1">@euro2020</p>
-</div></footer>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Popularity'],
+                ['Germany', 200],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['RU', 700]
+            ]);
+
+            var options = {};
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+
+<div id="regions_div" style="width: 900px; height: 500px;"></div>
 
 </body>
+</body>
 </html>
+

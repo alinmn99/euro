@@ -20,10 +20,10 @@ public class TeamBasementController {
     TeamBasementRepository teamBasementRepository;
 
     @GetMapping("/list")
-    public long shotTeamBasement (Model model) {
-        List<TeamBasement> teamBasement = (List<TeamBasement>) teamBasementRepository.findAll();
-        model.addAttribute("teamBasement",teamBasement);
-        return Long.parseLong("teamBasement");
+    public String getBasement(Model model) {
+        List<TeamBasement> teamBasementList = (List<TeamBasement>) teamBasementRepository.findAll();
+        model.addAttribute("teamBasement", teamBasementList);
+        return "teamBasement";
     }
 }
 

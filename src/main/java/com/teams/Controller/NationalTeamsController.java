@@ -28,13 +28,6 @@ public class NationalTeamsController {
         return "nationalTeams";
     }
 
-//    @GetMapping("/nationalTeams/add")
-//    @Secured("ROLE_USER")
-//    public String showNationalTeams(NationalTeamsDto nationalTeamsDto) {
-//        nationalTeamsDto.setName((List<NationalTeams>) nationalTeamsRepository.findAll());
-//        return "nationalTeam-add";
-//    }
-
     @GetMapping("/add")
     public String addNationalTeam(Model model) {
         NationalTeams nationalTeams = new NationalTeams();
@@ -62,14 +55,7 @@ public class NationalTeamsController {
         return "nationalTeams";
     }
 }
-//    @PostMapping("/delete")
-//    public String deleteTeam(@PathVariable("nationalTeams") long id, Model model) {
-//        NationalTeams nationalTeams = nationalTeamsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-//        nationalTeamsRepository.delete(nationalTeams);
-//        model.addAttribute("nationalTeams", nationalTeamsRepository.findAll());
-//        return "nationalTeams";
-//    }
-//}
+
 
 
 

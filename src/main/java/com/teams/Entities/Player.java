@@ -12,6 +12,9 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "face")
+    private String face;
+
     @Column(name = "name")
     private String name;
 
@@ -85,10 +88,19 @@ public class Player {
         this.age = age;
     }
 
+    public String getFace() {
+        return face;
+    }
+
+    public void setFace(String face) {
+        this.face = face;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "id=" + id +
+                ", face='" + face + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", domestic_team='" + domestic_team + '\'' +

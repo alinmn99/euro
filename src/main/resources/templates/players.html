@@ -37,19 +37,17 @@
     <tr th:each="players : ${players}">
         <td th:text="${players.id}"></td>
 
-        <td>
-            <img th:src="@{/playerfaces/donnaruma.png}" width="40" height="25">
-            <img th:src="@{/playerfaces/meret.png}" width="40" height="25">
+
+                <td>
+                    <img th:src="@{/images/{image}(image=${players.face})}" width="65" height="55"
+                         style="alignment: center" class="img-responsive center-block"/>
 
 
-        </td>
-        <!--      <td>-->
-        <!--          <img th:src="@{../static/playerfaces/face}"/>-->
-        <!--      </td>-->
-        <!--    <td>-->
-        <!--      <img th:src="@{/playerfaces/{image}(${players})}" width="40" height="25"-->
-        <!--           style="alignment: center" class="img-responsive center-block"/>-->
-        <!--    </td>-->
+                </td>
+
+           </td>
+
+
 
 
         <td th:text="${players.name}"></td>
