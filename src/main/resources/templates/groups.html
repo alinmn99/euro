@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-futbol-o, .fa-gamepad {
+            font-size: 200px
+
+
+        }
+    </style>
+
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #33A2FF;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #33A2FF;
+        }
+
+        .active {
+            background-color: #FF3933;
+        }
+    </style>
+    <ul>
+        <li><a href="http://localhost:8080/">Home</a></li>
+        <li><a href="/nationalTeams/list">Teams</a></li>
+        <li><a href="/player/list">Players</a></li>
+        <li><a href="/stadiums">Stadiums</a></li>
+        <li><a  href="/statistics">Statistics</a></li>
+        <li><a class="active" href="/groups">Groups</a></li>
+        <li><a href="/results">Results</a></li>
+
+    </ul>
+</head>
+<body>
+<center>
+<div class="group-container d3-plugin" id="grp-2006438" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006438&quot;}">
+    <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group A
+          </span>
+        <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+    </h3>
+    <table class="table table--standings">
+        <thead>
+        <tr>
+            <th class="table_team-name"></th>
+            <th class="table_team-played">
+                <span class="label--big">Played</span>
+                <span class="label--small">P</span>
+            </th>
+            <th class="table_team-won">
+                <span class="label--big">Won</span>
+                <span class="label--small">W</span>
+            </th>
+            <th class="table_team-drawn">
+                <span class="label--big">Drawn</span>
+                <span class="label--small">D</span>
+            </th>
+            <th class="table_team-lost">
+                <span class="label--big">Lost</span>
+                <span class="label--small">L</span>
+            </th>
+            <th class="table_team-for">
+                <span class="label--big">For</span>
+            </th>
+            <th class="table_team-against">
+                <span class="label--big">Against</span>
+            </th>
+            <th class="table_team-goal-diff">
+                Goal difference
+            </th>
+            <th class="table_team-points">
+                <span class="label--big">Points</span>
+                <span class="label--small">Pts</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+
+        <tr data-is-current-team="0" data-team-id="66" data-rank="1" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Italy">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Italy" alt="Italy" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ITA.png?imwidth=2048 2048w">
+                    <span class="team-code">ITA</span>
+                    <span class="team-name  js-team-name">
+                      Italy
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">3</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">7</td>
+            <td class="table_team-against js-goalsAgainst">0</td>
+            <td class="table_team-goal-diff js-goalDifference">7</td>
+            <td class="table_team-points">
+                <strong class="js-points">9</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="144" data-rank="2" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Wales">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Wales" alt="Wales" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/WAL.png?imwidth=2048 2048w">
+                    <span class="team-code">WAL</span>
+                    <span class="team-name  js-team-name">
+                      Wales
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">3</td>
+            <td class="table_team-against js-goalsAgainst">2</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="128" data-rank="3" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Switzerland">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Switzerland" alt="Switzerland" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SUI.png?imwidth=2048 2048w">
+                    <span class="team-code">SUI</span>
+                    <span class="team-name  js-team-name">
+                      Switzerland
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">5</td>
+            <td class="table_team-goal-diff js-goalDifference">-1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="135" data-rank="4" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Turkey">
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Turkey" alt="Turkey" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/TUR.png?imwidth=2048 2048w">
+                    <span class="team-code">TUR</span>
+                    <span class="team-name  js-team-name">
+                      Turkey
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">0</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">3</td>
+            <td class="table_team-for js-goalsFor">1</td>
+            <td class="table_team-against js-goalsAgainst">8</td>
+            <td class="table_team-goal-diff js-goalDifference">-7</td>
+            <td class="table_team-points">
+                <strong class="js-points">0</strong>
+            </td>
+        </tr></tbody>
+    </table>
+
+
+    <div class="group-container d3-plugin" id="grp-2006439" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006439&quot;}">
+        <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group B
+          </span>
+            <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+        </h3>
+        <table class="table table--standings">
+            <thead>
+            <tr>
+                <th class="table_team-name"></th>
+                <th class="table_team-played">
+                    <span class="label--big">Played</span>
+                    <span class="label--small">P</span>
+                </th>
+                <th class="table_team-won">
+                    <span class="label--big">Won</span>
+                    <span class="label--small">W</span>
+                </th>
+                <th class="table_team-drawn">
+                    <span class="label--big">Drawn</span>
+                    <span class="label--small">D</span>
+                </th>
+                <th class="table_team-lost">
+                    <span class="label--big">Lost</span>
+                    <span class="label--small">L</span>
+                </th>
+                <th class="table_team-for">
+                    <span class="label--big">For</span>
+                </th>
+                <th class="table_team-against">
+                    <span class="label--big">Against</span>
+                </th>
+                <th class="table_team-goal-diff">
+                    Goal difference
+                </th>
+                <th class="table_team-points">
+                    <span class="label--big">Points</span>
+                    <span class="label--small">Pts</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+
+
+            <tr data-is-current-team="0" data-team-id="13" data-rank="1" class="">
+                <td class="table_team-name">
+                  <span class="table_team-name_block" title="Belgium">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Belgium" alt="Belgium" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/BEL.png?imwidth=2048 2048w">
+                    <span class="team-code">BEL</span>
+                    <span class="team-name  js-team-name">
+                      Belgium
+                    </span>
+                  </span>
+                </td>
+                <td class="table_team-played js-played">3</td>
+                <td class="table_team-won js-won">3</td>
+                <td class="table_team-drawn js-drawn">0</td>
+                <td class="table_team-lost js-lost">0</td>
+                <td class="table_team-for js-goalsFor">7</td>
+                <td class="table_team-against js-goalsAgainst">1</td>
+                <td class="table_team-goal-diff js-goalDifference">6</td>
+                <td class="table_team-points">
+                    <strong class="js-points">9</strong>
+                </td>
+            </tr><tr data-is-current-team="0" data-team-id="35" data-rank="2" class="">
+                <td class="table_team-name">
+                  <span class="table_team-name_block" title="Denmark">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Denmark" alt="Denmark" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/DEN.png?imwidth=2048 2048w">
+                    <span class="team-code">DEN</span>
+                    <span class="team-name  js-team-name">
+                      Denmark
+                    </span>
+                  </span>
+                </td>
+                <td class="table_team-played js-played">3</td>
+                <td class="table_team-won js-won">1</td>
+                <td class="table_team-drawn js-drawn">0</td>
+                <td class="table_team-lost js-lost">2</td>
+                <td class="table_team-for js-goalsFor">5</td>
+                <td class="table_team-against js-goalsAgainst">4</td>
+                <td class="table_team-goal-diff js-goalDifference">1</td>
+                <td class="table_team-points">
+                    <strong class="js-points">3</strong>
+                </td>
+            </tr><tr data-is-current-team="0" data-team-id="42" data-rank="3" class="">
+                <td class="table_team-name">
+                  <span class="table_team-name_block" title="Finland">
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Finland" alt="Finland" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/FIN.png?imwidth=2048 2048w">
+                    <span class="team-code">FIN</span>
+                    <span class="team-name  js-team-name">
+                      Finland
+                    </span>
+                  </span>
+                </td>
+                <td class="table_team-played js-played">3</td>
+                <td class="table_team-won js-won">1</td>
+                <td class="table_team-drawn js-drawn">0</td>
+                <td class="table_team-lost js-lost">2</td>
+                <td class="table_team-for js-goalsFor">1</td>
+                <td class="table_team-against js-goalsAgainst">3</td>
+                <td class="table_team-goal-diff js-goalDifference">-2</td>
+                <td class="table_team-points">
+                    <strong class="js-points">3</strong>
+                </td>
+            </tr><tr data-is-current-team="0" data-team-id="57451" data-rank="4" class="">
+                <td class="table_team-name">
+                  <span class="table_team-name_block" title="Russia">
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Russia" alt="Russia" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/RUS.png?imwidth=2048 2048w">
+                    <span class="team-code">RUS</span>
+                    <span class="team-name  js-team-name">
+                      Russia
+                    </span>
+                  </span>
+                </td>
+                <td class="table_team-played js-played">3</td>
+                <td class="table_team-won js-won">1</td>
+                <td class="table_team-drawn js-drawn">0</td>
+                <td class="table_team-lost js-lost">2</td>
+                <td class="table_team-for js-goalsFor">2</td>
+                <td class="table_team-against js-goalsAgainst">7</td>
+                <td class="table_team-goal-diff js-goalDifference">-5</td>
+                <td class="table_team-points">
+                    <strong class="js-points">3</strong>
+                </td>
+            </tr></tbody>
+        </table>
+
+
+        </div>
+        <div class="hidden-matches-2006439">
+        </div>
+
+    </div>
+</div>
+
+<div class="group-container d3-plugin" id="grp-2006440" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006440&quot;}">
+    <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group C
+          </span>
+        <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+    </h3>
+    <table class="table table--standings">
+        <thead>
+        <tr>
+            <th class="table_team-name"></th>
+            <th class="table_team-played">
+                <span class="label--big">Played</span>
+                <span class="label--small">P</span>
+            </th>
+            <th class="table_team-won">
+                <span class="label--big">Won</span>
+                <span class="label--small">W</span>
+            </th>
+            <th class="table_team-drawn">
+                <span class="label--big">Drawn</span>
+                <span class="label--small">D</span>
+            </th>
+            <th class="table_team-lost">
+                <span class="label--big">Lost</span>
+                <span class="label--small">L</span>
+            </th>
+            <th class="table_team-for">
+                <span class="label--big">For</span>
+            </th>
+            <th class="table_team-against">
+                <span class="label--big">Against</span>
+            </th>
+            <th class="table_team-goal-diff">
+                Goal difference
+            </th>
+            <th class="table_team-points">
+                <span class="label--big">Points</span>
+                <span class="label--small">Pts</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+
+        <tr data-is-current-team="0" data-team-id="95" data-rank="1" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Netherlands">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Netherlands" alt="Netherlands" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/NED.png?imwidth=2048 2048w">
+                    <span class="team-code">NED</span>
+                    <span class="team-name  js-team-name">
+                      Netherlands
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">3</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">8</td>
+            <td class="table_team-against js-goalsAgainst">2</td>
+            <td class="table_team-goal-diff js-goalDifference">6</td>
+            <td class="table_team-points">
+                <strong class="js-points">9</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="8" data-rank="2" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Austria">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Austria" alt="Austria" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/AUT.png?imwidth=2048 2048w">
+                    <span class="team-code">AUT</span>
+                    <span class="team-name  js-team-name">
+                      Austria
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">2</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">3</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">6</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="57166" data-rank="3" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Ukraine">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Ukraine" alt="Ukraine" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/UKR.png?imwidth=2048 2048w">
+                    <span class="team-code">UKR</span>
+                    <span class="team-name  js-team-name">
+                      Ukraine
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">2</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">5</td>
+            <td class="table_team-goal-diff js-goalDifference">-1</td>
+            <td class="table_team-points">
+                <strong class="js-points">3</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="59205" data-rank="4" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="North Macedonia">
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="North Macedonia" alt="North Macedonia" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/MKD.png?imwidth=2048 2048w">
+                    <span class="team-code">MKD</span>
+                    <span class="team-name  js-team-name">
+                      North Macedonia
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">0</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">3</td>
+            <td class="table_team-for js-goalsFor">2</td>
+            <td class="table_team-against js-goalsAgainst">8</td>
+            <td class="table_team-goal-diff js-goalDifference">-6</td>
+            <td class="table_team-points">
+                <strong class="js-points">0</strong>
+            </td>
+        </tr></tbody>
+    </table>
+
+</div>
+
+
+<div class="group-container d3-plugin" id="grp-2006441" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006441&quot;}">
+    <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group D
+          </span>
+        <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+    </h3>
+    <table class="table table--standings">
+        <thead>
+        <tr>
+            <th class="table_team-name"></th>
+            <th class="table_team-played">
+                <span class="label--big">Played</span>
+                <span class="label--small">P</span>
+            </th>
+            <th class="table_team-won">
+                <span class="label--big">Won</span>
+                <span class="label--small">W</span>
+            </th>
+            <th class="table_team-drawn">
+                <span class="label--big">Drawn</span>
+                <span class="label--small">D</span>
+            </th>
+            <th class="table_team-lost">
+                <span class="label--big">Lost</span>
+                <span class="label--small">L</span>
+            </th>
+            <th class="table_team-for">
+                <span class="label--big">For</span>
+            </th>
+            <th class="table_team-against">
+                <span class="label--big">Against</span>
+            </th>
+            <th class="table_team-goal-diff">
+                Goal difference
+            </th>
+            <th class="table_team-points">
+                <span class="label--big">Points</span>
+                <span class="label--small">Pts</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+
+        <tr data-is-current-team="0" data-team-id="39" data-rank="1" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="England">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="England" alt="England" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ENG.png?imwidth=2048 2048w">
+                    <span class="team-code">ENG</span>
+                    <span class="team-name  js-team-name">
+                      England
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">2</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">2</td>
+            <td class="table_team-against js-goalsAgainst">0</td>
+            <td class="table_team-goal-diff js-goalDifference">2</td>
+            <td class="table_team-points">
+                <strong class="js-points">7</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="56370" data-rank="2" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Croatia">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Croatia" alt="Croatia" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/CRO.png?imwidth=2048 2048w">
+                    <span class="team-code">CRO</span>
+                    <span class="team-name  js-team-name">
+                      Croatia
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">3</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="58837" data-rank="3" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Czech Republic">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Czech Republic" alt="Czech Republic" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/CZE.png?imwidth=2048 2048w">
+                    <span class="team-code">CZE</span>
+                    <span class="team-name  js-team-name">
+                      Czech Republic
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">3</td>
+            <td class="table_team-against js-goalsAgainst">2</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="117" data-rank="4" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Scotland">
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Scotland" alt="Scotland" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SCO.png?imwidth=2048 2048w">
+                    <span class="team-code">SCO</span>
+                    <span class="team-name  js-team-name">
+                      Scotland
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">0</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">2</td>
+            <td class="table_team-for js-goalsFor">1</td>
+            <td class="table_team-against js-goalsAgainst">5</td>
+            <td class="table_team-goal-diff js-goalDifference">-4</td>
+            <td class="table_team-points">
+                <strong class="js-points">1</strong>
+            </td>
+        </tr></tbody>
+    </table>
+
+</div>
+
+
+<div class="group-container d3-plugin" id="grp-2006442" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006442&quot;}">
+    <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group E
+          </span>
+        <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+    </h3>
+    <table class="table table--standings">
+        <thead>
+        <tr>
+            <th class="table_team-name"></th>
+            <th class="table_team-played">
+                <span class="label--big">Played</span>
+                <span class="label--small">P</span>
+            </th>
+            <th class="table_team-won">
+                <span class="label--big">Won</span>
+                <span class="label--small">W</span>
+            </th>
+            <th class="table_team-drawn">
+                <span class="label--big">Drawn</span>
+                <span class="label--small">D</span>
+            </th>
+            <th class="table_team-lost">
+                <span class="label--big">Lost</span>
+                <span class="label--small">L</span>
+            </th>
+            <th class="table_team-for">
+                <span class="label--big">For</span>
+            </th>
+            <th class="table_team-against">
+                <span class="label--big">Against</span>
+            </th>
+            <th class="table_team-goal-diff">
+                Goal difference
+            </th>
+            <th class="table_team-points">
+                <span class="label--big">Points</span>
+                <span class="label--small">Pts</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+
+        <tr data-is-current-team="0" data-team-id="127" data-rank="1" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Sweden">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Sweden" alt="Sweden" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SWE.png?imwidth=2048 2048w">
+                    <span class="team-code">SWE</span>
+                    <span class="team-name  js-team-name">
+                      Sweden
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">2</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">2</td>
+            <td class="table_team-goal-diff js-goalDifference">2</td>
+            <td class="table_team-points">
+                <strong class="js-points">7</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="122" data-rank="2" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Spain">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Spain" alt="Spain" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/ESP.png?imwidth=2048 2048w">
+                    <span class="team-code">ESP</span>
+                    <span class="team-name  js-team-name">
+                      Spain
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">2</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">6</td>
+            <td class="table_team-against js-goalsAgainst">1</td>
+            <td class="table_team-goal-diff js-goalDifference">5</td>
+            <td class="table_team-points">
+                <strong class="js-points">5</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="58836" data-rank="3" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Slovakia">
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Slovakia" alt="Slovakia" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/SVK.png?imwidth=2048 2048w">
+                    <span class="team-code">SVK</span>
+                    <span class="team-name  js-team-name">
+                      Slovakia
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">0</td>
+            <td class="table_team-lost js-lost">2</td>
+            <td class="table_team-for js-goalsFor">2</td>
+            <td class="table_team-against js-goalsAgainst">7</td>
+            <td class="table_team-goal-diff js-goalDifference">-5</td>
+            <td class="table_team-points">
+                <strong class="js-points">3</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="109" data-rank="4" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Poland">
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Poland" alt="Poland" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/POL.png?imwidth=2048 2048w">
+                    <span class="team-code">POL</span>
+                    <span class="team-name  js-team-name">
+                      Poland
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">0</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">2</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">6</td>
+            <td class="table_team-goal-diff js-goalDifference">-2</td>
+            <td class="table_team-points">
+                <strong class="js-points">1</strong>
+            </td>
+        </tr></tbody>
+    </table>
+
+</div>
+
+<div class="group-container d3-plugin" id="grp-2006443" data-plugin="livestandings" data-options="{&quot;baseUrl&quot;:&quot;https://standings.uefa.com/v1/standings&quot;,&quot;apiKey&quot;:&quot;ceeee1a5bb209502c6c438abd8f30aef179ce669bb9288f2d1cf2fa276de03f4&quot;,&quot;groupIds&quot;:[&quot;2006438&quot;,&quot;2006439&quot;,&quot;2006440&quot;,&quot;2006441&quot;,&quot;2006442&quot;,&quot;2006443&quot;],&quot;groupId&quot;:&quot;2006443&quot;}">
+    <h3 class="standings--groupname js-group-name">
+
+          <span class="group-name">
+            Group F
+          </span>
+        <span class="live-now">
+            <span class="live-now_label">Live now</span>
+          </span>
+    </h3>
+    <table class="table table--standings">
+        <thead>
+        <tr>
+            <th class="table_team-name"></th>
+            <th class="table_team-played">
+                <span class="label--big">Played</span>
+                <span class="label--small">P</span>
+            </th>
+            <th class="table_team-won">
+                <span class="label--big">Won</span>
+                <span class="label--small">W</span>
+            </th>
+            <th class="table_team-drawn">
+                <span class="label--big">Drawn</span>
+                <span class="label--small">D</span>
+            </th>
+            <th class="table_team-lost">
+                <span class="label--big">Lost</span>
+                <span class="label--small">L</span>
+            </th>
+            <th class="table_team-for">
+                <span class="label--big">For</span>
+            </th>
+            <th class="table_team-against">
+                <span class="label--big">Against</span>
+            </th>
+            <th class="table_team-goal-diff">
+                Goal difference
+            </th>
+            <th class="table_team-points">
+                <span class="label--big">Points</span>
+                <span class="label--small">Pts</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+
+        <tr data-is-current-team="0" data-team-id="43" data-rank="1" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="France">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="France" alt="France" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/FRA.png?imwidth=2048 2048w">
+                    <span class="team-code">FRA</span>
+                    <span class="team-name  js-team-name">
+                      France
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">2</td>
+            <td class="table_team-lost js-lost">0</td>
+            <td class="table_team-for js-goalsFor">4</td>
+            <td class="table_team-against js-goalsAgainst">3</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">5</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="47" data-rank="2" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Germany">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Germany" alt="Germany" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/GER.png?imwidth=2048 2048w">
+                    <span class="team-code">GER</span>
+                    <span class="team-name  js-team-name">
+                      Germany
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">6</td>
+            <td class="table_team-against js-goalsAgainst">5</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="110" data-rank="3" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Portugal">
+                      <span class="table_team-qualified"></span>
+
+                    <img class="team-flag lazyautosizes ls-is-cached lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Portugal" alt="Portugal" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/POR.png?imwidth=2048 2048w">
+                    <span class="team-code">POR</span>
+                    <span class="team-name  js-team-name">
+                      Portugal
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">1</td>
+            <td class="table_team-drawn js-drawn">1</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">7</td>
+            <td class="table_team-against js-goalsAgainst">6</td>
+            <td class="table_team-goal-diff js-goalDifference">1</td>
+            <td class="table_team-points">
+                <strong class="js-points">4</strong>
+            </td>
+        </tr><tr data-is-current-team="0" data-team-id="57" data-rank="4" class="">
+            <td class="table_team-name">
+                  <span class="table_team-name_block" title="Hungary">
+
+                    <img class="team-flag lazyautosizes lazyloaded" loading="lazy" data-sizes="auto" src="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" data-srcset="https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=2048 2048w" data-fallback="https://img.uefa.com/imgml/TP/teams/logos/teamlogo_fallback.svg" title="Hungary" alt="Hungary" sizes="32px" srcset="https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=158 158w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=276 276w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=280 280w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=369 369w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=490 490w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=556 556w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=656 656w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=988 988w, https://www.uefa.com/imgml/flags/70x70/HUN.png?imwidth=2048 2048w">
+                    <span class="team-code">HUN</span>
+                    <span class="team-name  js-team-name">
+                      Hungary
+
+                    </span>
+                  </span>
+            </td>
+            <td class="table_team-played js-played">3</td>
+            <td class="table_team-won js-won">0</td>
+            <td class="table_team-drawn js-drawn">2</td>
+            <td class="table_team-lost js-lost">1</td>
+            <td class="table_team-for js-goalsFor">3</td>
+            <td class="table_team-against js-goalsAgainst">6</td>
+            <td class="table_team-goal-diff js-goalDifference">-3</td>
+            <td class="table_team-points">
+                <strong class="js-points">2</strong>
+            </td>
+        </tr></tbody>
+    </table>
+
+</div>
+</center>
+</body>
+</html>
