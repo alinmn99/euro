@@ -18,49 +18,80 @@
 
     .fa-futbol-o, .fa-gamepad {
         font-size: 200px
+
+
+    }
+
+
+</style>
+
+<style>
+    body {
+        font-size: 14px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #33A2FF;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #33A2FF;
+    }
+
+    .active {
+        background-color: #FF3933;
     }
 </style>
+<ul>
+    <li><a class="active"  href="http://localhost:8080/">Home <i class="fa fa-home"></i> </a></li>
+    <li><a  href="/nationalTeams/list">Teams</a></li>
+    <li><a  href="/player/list">Players</a></li>
+    <li><a href="/stadiums">Stadiums</a></li>
+</ul>
 <body>
+<center>
 
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
-           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
-                class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Teams</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Players</a>
-    </div>
-
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Teams</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Players</a>
-    </div>
-</div>
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">Euro Simulation</h1>
+    <h1 class="w3-margin w3-jumbo">Euro 2020</h1>
     <p class="w3-xlarge">Template by 4MooN Studio</p>
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
         <div class="w3-twothird">
-            <h1>Euro Simulation</h1>
-            <h5 class="w3-padding-32">Euro Simulation is a simple aplication for Euro Fans who can make a quickly and
-                fun simulation in hope to pick their favorite team</h5>
+            <h1>Euro 2020</h1>
+            <h5 class="w3-padding-32">Euro 2020 is a competition between Europe Nation to prove who has the best squad and results.</h5>
 
             <p class="w3-text-grey">Euro is knowed in entire world because every Euro Competion has a High Level of
                 performance and Tought teams and players too</p>
         </div>
 
         <div class="w3-third w3-center">
-            <i class="fa fa-futbol-o w3-padding-64 w3-text-blue"></i>
+
+            <i class="fa fa-gamepad w3-padding-64 w3-text-blue w3-margin-right" ></i>
         </div>
     </div>
 </div>
@@ -69,29 +100,68 @@
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
         <div class="w3-third w3-center">
-            <i class="fa fa-gamepad w3-padding-64 w3-text-blue w3-margin-right"></i>
+            <center>
+            <i class="fa fa-futbol-o w3-padding-64 w3-text-blue"></i> </center>
         </div>
 
         <div class="w3-twothird">
-            <h1>Lorem Ipsum</h1>
-            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>Italy win EURO 2020</h1>
+            <p class="-align-center"> <img src="https://celoghnews.files.wordpress.com/2021/07/1626022626_214774_1626042195_noticia_normal_recorte1.jpg" width="100%">
+                Italy is the Winner for past EURO, winning after a game with England on Wemblay Stadium.
+            The Game ended after Penalty Kicks where Italians win with 4-2</p>
         </div>
     </div>
 </div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-</div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'International Level'],
+                ['Italy', 5],
+                ['Switzerland', 2],
+                ['Turkey', 3],
+                ['Wales', 1],
+                ['Belgium', 3],
+                ['Denmark', 3],
+                ['Finland', 1],
+                ['Russia', 3],
+                ['Austria', 2],
+                ['Macedonia', 1],
+                ['Netherlands', 4],
+                ['Ukraine', 2],
+                ['Croatia', 4],
+                ['Czech Republic', 3],
+                ['England', 4],
+                ['Scotland', 2],
+                ['Poland', 2],
+                ['Slovakia', 2],
+                ['Spain', 5],
+                ['Sweden', 3],
+                ['France', 5],
+                ['Germany', 5],
+                ['Hungary', 1],
+                ['Portugal', 5]
+
+                // ['Romania',22]
+            ]);
+
+            var options = {};
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+<body>
+
+<div id="regions_div" style="width: 900px; height: 500px;"></div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
@@ -102,85 +172,13 @@
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by 4MooNStudio</a></p>
-
-    <div id="London" class="city">
-        <h2>London</h2>
-        <p>London is the capital of England.</p>
-    </div>
-
-    <div id="Paris" class="city" style="display:none">
-        <h2>Paris</h2>
-        <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Tokyo" class="city" style="display:none">
-        <h2>Tokyo</h2>
-        <p>Tokyo is the capital of Japan.</p>
-    </div>
-    <div class="w3-bar w3-black">
-        <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-        <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-        <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
-
-    </div>
-    <script>
-        function openCity(cityName) {
-            var i;
-            var x = document.getElementsByClassName("city");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            document.getElementById(cityName).style.display = "block";
-        }
-    </script>
-
 </footer>
 
 <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
+
+
 </script>
-
-
-<head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {
-            'packages': ['geochart'],
-        });
-        google.charts.setOnLoadCallback(drawRegionsMap);
-
-        function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                ['Country', 'Popularity'],
-                ['Germany', 200],
-                ['Brazil', 400],
-                ['Canada', 500],
-                ['France', 600],
-                ['RU', 700]
-            ]);
-
-            var options = {};
-
-            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-            chart.draw(data, options);
-        }
-    </script>
-</head>
-<body>
-
-<div id="regions_div" style="width: 900px; height: 500px;"></div>
-
+</center>
 </body>
 </body>
 </html>

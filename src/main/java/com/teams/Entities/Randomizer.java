@@ -10,9 +10,9 @@ public class Randomizer {
     // Drive Function
     public static void main(String[] args) {
 
-        // create a list of Integer type
+        // create a list
         List<String> list = new ArrayList<>();
-        // add 5 element in ArrayList
+        // 24 countrys
         list.add("Italy");
         list.add("Turkey");
         list.add("Switzerland");

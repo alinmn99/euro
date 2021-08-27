@@ -1,78 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>National Teams</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-    .fa-futbol-o,.fa-gamepad {font-size:200px}
-</style>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Players</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-futbol-o, .fa-gamepad {
+            font-size: 200px
+
+
+        }
+    </style>
+
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #33A2FF;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #33A2FF;
+        }
+
+        .active {
+            background-color: #FF3933;
+        }
+    </style>
+    <ul>
+        <li><a href="http://localhost:8080/">Home</a></li>
+        <li><a class="active" href="/nationalTeams/list">Teams</a></li>
+        <li><a  href="/player/list">Players</a></li>
+        <li><a href="/stadiums">Stadiums</a></li>
+    </ul>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-blue w3-card w3-left-align ">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-group"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o"></i></a>
+
+    <div>
+
+        <table class="table table-striped table-responsive-md">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>flag</th>
+                <th>name</th>
+
+
+                <th>
+                    <div>
+                        <a th:href="@{/nationalTeams/add}" style="alignment: center" class="btn btn-primary btn-sm mb-3">Add
+                            team</a>
+                    </div>
+                </th>
+
+                <th>
+                    <a href=# class="btn btn-danger btn-sm mb-3">Delete</a>
+                </th>
+
+
+            </tr>
+            <tbody>
+            <tr th:each="nationalTeam : ${nationalTeams}">
+                <td th:text="${nationalTeam.id}"></td>
+
+                <td>
+                    <img th:src="@{/images/{image}(image=${nationalTeam.flag})}" width="60" height="35"
+                         style="alignment: center" class="img-responsive center-block"/>
+
+                </td>
+                <td
+                        th:text="${nationalTeam.name}"></td>
+                <td>
+                    <a th:href="@{/nationalTeams/update(nationalTeamId=${nationalTeam.id})}"
+                       style="alignment: center" class="btn btn-primary btn-sm mb-3">Update</a>
+                </td>
+
+                <td>
+                    <a th:href="@{/nationalTeams/delete/{id}(id=${nationalTeam.id})}" style="alignment: center"
+                       class="btn btn-warning btn-sm mb-3">Delete</a>
+                </td>
+
+
+            </tr>
+            </tbody>
+        </table>
     </div>
-
-
-<div>
-
-    <table class="table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>flag</th>
-            <th>name</th>
-
-
-            <th>
-                <div>
-                    <a th:href="@{/nationalTeams/add}" style="alignment: center" class="btn btn-danger btn-sm mb-3">Add
-                        team</a>
-                </div>
-            </th>
-
-            <th>
-                <a href=# class="btn btn-danger btn-sm mb-3">Delete</a>
-            </th>
-
-
-        </tr>
-        <tbody>
-        <tr th:each="nationalTeam : ${nationalTeams}">
-            <td th:text="${nationalTeam.id}"></td>
-
-            <td>
-                <img th:src="@{/images/{image}(image=${nationalTeam.flag})}" width="40" height="25"
-                     style="alignment: center" class="img-responsive center-block"/>
-
-            </td>
-            <td
-                    th:text="${nationalTeam.name}"></td>
-            <td>
-                <a th:href="@{/nationalTeams/update(nationalTeamId=${nationalTeam.id})}"
-                   style="alignment: center" class="btn btn-warning btn-sm mb-3">Update</a>
-            </td>
-
-            <td>
-                <a th:href="@{/nationalTeams/delete/{id}(id=${nationalTeam.id})}" style="alignment: center"
-                   class="btn btn-warning btn-sm mb-3">Delete</a>
-            </td>
-
-
-        </tr>
-        </tbody>
-    </table>
-</div>
 
 </body>
 </html>
