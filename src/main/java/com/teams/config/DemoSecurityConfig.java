@@ -29,9 +29,10 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
 
-                .antMatchers("/player").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/player").hasRole("ADMIN")
 
-                .antMatchers("/nationalTeams/list*").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/nationalTeams/list*").hasRole("ADMIN")
+                .antMatchers("/nationalTeams/list2*").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/nationalTeams/add*").hasRole("ADMIN")
                 .antMatchers("/nationalTeams/update*").hasRole("ADMIN")
                 .antMatchers("/nationalTeams/save*").hasRole("ADMIN")
